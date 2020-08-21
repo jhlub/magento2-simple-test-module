@@ -1,0 +1,11 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="TestTask\SimpleTest\Api\SimpleTestApiInterface" type="TestTask\SimpleTest\Model\SimpleTestApiModel"/>
+
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="simpleTest_printConfigFieldValue" xsi:type="object">TestTask\SimpleTest\Console\Command\PrintConfigFieldValueCommand</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

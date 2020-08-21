@@ -1,0 +1,18 @@
+{
+  "name": "test-task/simple-test-module",
+  "description": "A simple test module",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "unlicensed"
+  ],
+  "require": {
+    "php": "~7.2.0||~7.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "TestTask\\SimpleTest\\": ""
+    },
+    "files": [ "registration.php" ]
+  }
+}

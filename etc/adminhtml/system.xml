@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="1">
+            <label>General</label> 
+            <tab>general</tab>
+            <resource>Magento_Config::config_general</resource>
+            <group id="store_information" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="0" showInStore="1">
+                <field id="simple_test_description" translate="label" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="1" type="text">
+                    <label>Simple Test Field Label</label>
+                    <comment>Add store description.</comment>
+                    <tooltip>Longer description about this field. This field is just adding the description for store.</tooltip>
+                    <validate>validate-alphanum-with-spaces</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

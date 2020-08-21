@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+	<route method="GET" url="/V1/simpletest/json">
+		<service class="TestTask\SimpleTest\Api\SimpleTestApiInterface" method="getJson"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+
+	<route method="GET" url="/V1/simpletest/array-of-arrays">
+		<service class="TestTask\SimpleTest\Api\SimpleTestApiInterface" method="getArrayOfArrays"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+
+	<route method="GET" url="/V1/simpletest/array-of-objects">
+		<service class="TestTask\SimpleTest\Api\SimpleTestApiInterface" method="getArrayOfObjects"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+</routes>
