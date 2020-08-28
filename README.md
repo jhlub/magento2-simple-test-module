@@ -76,4 +76,4 @@ URLs:
 
 - `/rest/V1/simpletest/json` - response json string
 - `/rest/V1/simpletest/array-of-arrays` - response array of arrays
-- ~~`/rest/V1/simpletest/array-of-objects` - response array of objects~~ - Need to proper implement this one!
+- `/rest/V1/simpletest/array-of-objects` - response array of objects
