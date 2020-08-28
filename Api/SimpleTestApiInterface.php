@@ -25,9 +25,9 @@ interface SimpleTestApiInterface {
     /**
      * GET object for SimpleTestAPI.
      * 
-     * Return array of objects.
+     * Return array of objects CustomStoreInterface.
      * 
-     * @return array
+     * @return \TestTask\SimpleTest\Api\Data\CustomStoreInterface[]
      */
     public function getArrayOfObjects();
 }

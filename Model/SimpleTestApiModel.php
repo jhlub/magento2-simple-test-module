@@ -92,27 +92,29 @@ class SimpleTestApiModel implements SimpleTestApiInterface {
     }
 
     /**
-     * TODO!
-     * GET array for SimpleTestAPI.
+     * GET array of objects for SimpleTestAPI.
      * URL: /rest/V1/simpletest/array-of-objects
      *
-     * Return array of objects.
+     * Return array of objects CustomStoreInterface.
      * 
-     * @return object
+     * @return \TestTask\SimpleTest\Api\Data\CustomStoreInterface[]
      */
     public function getArrayOfObjects(): array
     {
-      // HACKISH just for test!
-      $storeConfigs = $this->getStoreConfigs();
-      $storeConfigsAsObjects = [];
+        $storeCollection = $this->_storeCollectionFactory->create();
+        $storeConfigs = [];
+        // Only those fields are used
+        // Set also proper aliases provided in Test Task directions
+        $columns = ['store_id', 'code as store_code', 'name as value'];
+        $storeCollection->getSelect()
+                        ->reset(\Zend_Db_Select::COLUMNS)
+                        ->columns($columns);
 
-      foreach($storeConfigs as $item) {
-        $storeConfigsAsObjects[] = (object) $item;
-      }
+        foreach ($storeCollection->load() as $item) {
+            $storeConfigs[] = $item;
+        }
 
-      // TODO! PROPER ARRAY OF OBJECTS!
-
-      return $storeConfigsAsObjects;
+        return $storeConfigs;
     }
 
     /**
